@@ -2,14 +2,14 @@ import React from 'react'
 import styled from 'styled-components'
 import { SmallWidgetProps } from '../../types';
 
-export const SmallWidget : React.FC<SmallWidgetProps> = ({title,PercentageNum,TotalNum,Link,icon}) => {
+export const SmallWidget : React.FC<SmallWidgetProps> = ({title,PercentageNum,TotalNum,Link,icon,isCurrency}) => {
   return (
     <Container>
         <WidgetTop>
             <Title>{title}</Title>
             <Percentage>{PercentageNum}%</Percentage>
         </WidgetTop>
-        <TotalNumber>{TotalNum}</TotalNumber>
+        <TotalNumber>{isCurrency && "$"}{TotalNum}</TotalNumber>
         <WidgetBottom>
             <PageLink>{Link}</PageLink>
             {icon}
@@ -29,7 +29,6 @@ const WidgetBottom = styled.div`
     svg {
         width: 40px;
         height: 40px;
-        color: #f56f6f;
     }
 `
 

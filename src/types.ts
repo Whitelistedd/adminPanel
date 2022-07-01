@@ -1,3 +1,5 @@
+import React from "react"
+
 export interface NavListProps {
     listName: string,
     NavList:  NavLocationsProps[]
@@ -16,7 +18,28 @@ export type LeftNavListType = Array<{
 export interface SmallWidgetProps {
     title: string
     PercentageNum: string,
-    TotalNum: number,
+    TotalNum: string,
     Link: string,
     icon: JSX.Element,
+    isCurrency: boolean,
+}
+
+export interface StatsProps {
+    List: Array<string>,
+    numbers: number,
+}
+
+export interface ProgressProps {
+    valueStart: number,
+    valueEnd: number,
+    children?: any,
+}
+
+export interface LayoutProps {
+    children: React.ReactNode
+}
+
+export interface DataTableProps {
+    rows: any[]
+    columns: any[]
 }

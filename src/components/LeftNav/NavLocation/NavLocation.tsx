@@ -1,13 +1,16 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { NavLocationsProps } from '../../../types'
 
 export const NavLocation : React.FC<NavLocationsProps> = ({icon,title}) => {
   return (
-    <Container>
-        {icon}
-        {title}
-    </Container>  
+    <Link to={title === "Dashboard" ? `/` : `/${title}` } >
+      <Container>
+          {icon}
+          {title}
+      </Container>  
+    </Link>
   )
 }
 
