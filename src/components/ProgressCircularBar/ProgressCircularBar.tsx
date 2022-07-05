@@ -1,6 +1,7 @@
 import React from 'react'
 import { CircularProgressbar } from 'react-circular-progressbar'
 import styled from 'styled-components'
+
 import { ProgressProps } from '../../types'
 import { ProgressProvider } from '../ProgressProvider/ProgressProvider'
 

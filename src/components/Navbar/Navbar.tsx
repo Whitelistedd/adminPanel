@@ -64,7 +64,7 @@ const SearchWrap = styled.div`
   }
 `
 
-const Container = styled.div`
+const Container = styled.nav`
     display: flex;
     align-items: center;
     justify-content: space-between;

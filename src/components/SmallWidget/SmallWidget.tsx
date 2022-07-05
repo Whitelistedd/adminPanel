@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+
 import { SmallWidgetProps } from '../../types';
 
 export const SmallWidget : React.FC<SmallWidgetProps> = ({title,PercentageNum,TotalNum,Link,icon,isCurrency}) => {
@@ -51,7 +52,7 @@ const WidgetTop = styled.div`
 `
 
 const Container = styled.div`
-    box-shadow: 5px 5px 10px rgb(0, 0, 0, 0.1);
+    box-shadow: 2px 4px 10px 1px rgb(201, 201, 201, 0.47);
     padding: 0.5em;
     width: 20%;
     height: 150px;

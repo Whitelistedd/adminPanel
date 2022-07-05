@@ -2,11 +2,12 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import 'react-circular-progressbar/dist/styles.css';
+
 import { Stats } from '../Stats/Stats';
 import { StatsList } from '../../data';
 import { ProgressCircularBar } from '../ProgressCircularBar/ProgressCircularBar';
 
-export const RevenueWidget = () => {
+export const RevenueWidget : React.FC = () => {
 
   const [percentage,setPercentage] = useState(70)
 
@@ -54,7 +55,7 @@ const Container = styled.div`
   align-items: center;
   color: grey;
   gap: 1.5em;
-  box-shadow: 2px 2px 20px rgb(0, 0, 0, 0.1);
+  box-shadow: 2px 4px 10px 1px rgb(201, 201, 201, 0.47);
   border-radius: 10px;
   font-size: 17px;
 `

@@ -1,10 +1,11 @@
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material'
 import React from 'react'
 import styled from 'styled-components'
+
 import { TransactionRows } from '../../data'
 import { DataTableProps } from '../../types'
 
-export const DataTable : React.FC<DataTableProps> = ({rows, columns}) => {
+export const DataTable : React.FC<DataTableProps> = ({rows}) => {
   return (
     <StyledTableContainer>
       <Table>
@@ -18,11 +19,11 @@ export const DataTable : React.FC<DataTableProps> = ({rows, columns}) => {
             <TableCell>Status</TableCell>
           </TableRow>
         </TableHead>
-        <TableBody>
+        <TableBody >
           {
             TransactionRows.map(row =>
-            <TableRow>
-              <TableCell>{row.id}</TableCell>
+            <TableRow >
+              <TableCell >{row.id}</TableCell>
               <TableCell>{row.product}</TableCell>
               <TableCell>{row.name}</TableCell>
               <TableCell>{row.date}</TableCell>
@@ -48,4 +49,7 @@ const Status = styled.span<{status: string}>`
 
 const StyledTableContainer = styled(TableContainer)`
   height: 100%;
+  border: 1px solid #E0E0E0;
+  border-radius: 10px;
+  box-shadow: 2px 4px 10px 1px rgb(201, 201, 201, 0.47);
 `

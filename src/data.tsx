@@ -13,7 +13,7 @@ import { LeftNavListType } from './types';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import PaidOutlinedIcon from '@mui/icons-material/PaidOutlined';
 import AccountBalanceWalletOutlinedIcon from '@mui/icons-material/AccountBalanceWalletOutlined';
-import { GridColDef,GridValueGetterParams } from '@mui/x-data-grid';
+import { GridColDef } from '@mui/x-data-grid';
 
 export const LeftNavigationLists : LeftNavListType = [
     {
@@ -130,40 +130,6 @@ export const StatsList = [
 
 export const ChartData = [{ name: 'Jan', uv: 600, }, { name: 'Feb', uv: 500, }, { name: 'March', uv: 450, }, { name: 'April', uv: 400, }, { name: 'May', uv : 600, }, { name: 'June', uv : 700, }, { name: 'July', uv : 400, }, { name: 'August', uv : 500, }, { name: 'September', uv : 600, }, { name: 'October', uv : 500, }, { name: 'November', uv : 300, }, { name: 'December', uv : 600, }]
 
-export const TransactionColumns: GridColDef[] = [
-    { 
-      field: 'id', 
-      headerName: 'Transaction ID', 
-      width: 250
-    },
-    {
-      field: 'product',
-      headerName: 'Product',
-      width: 250
-    },
-    {
-      field: 'name',
-      headerName: 'Name',
-      width: 250
-    },
-    {
-      field: 'date',
-      headerName: 'Date',
-      width: 250
-    },
-    {
-      field: 'amount',
-      headerName: 'Amount',
-      type: 'number',
-      width: 250
-    },
-    {
-      field: 'status',
-      headerName: 'Status',
-      width: 250
-    },
-];
-
 export const TransactionRows = [
     { id: 62334568324, product: 'Cedar Slim Lightweight Shirt', name: 'Jon', date: "15/6/2022", amount: 2000, status: 'Approved'},
     { id: 35645645364, product: 'Specialist Striped Linen', name: 'Cersei', date: "15/6/2022", amount: 2000, status: 'Declined' },
@@ -175,3 +141,44 @@ export const TransactionRows = [
     { id: 36289867567, product: 'Specialist Striped Linen', name: 'Rossini', date: "15/6/2022", amount: 2000, status: 'Approved' },
     { id: 36399647356, product: 'Specialist Striped Linen', name: 'Harvey', date: "15/6/2022", amount: 2000, status: 'Pending' },
   ];
+
+  export const UsersColumns : GridColDef[] = [
+    { 
+      field: 'id', 
+      headerName: 'ID', 
+      width: 90
+    },
+    {
+      field: 'username',
+      headerName: 'User',
+      width: 250
+    },
+    {
+      field: 'email',
+      headerName: 'Email',
+      width: 450
+    },
+    {
+      field: 'age',
+      headerName: 'Age',
+      type: 'number',
+      width: 250
+    },
+    {
+      field: 'status',
+      headerName: 'Status',
+      width: 250
+    },
+];
+
+export const UsersRows = [
+    { id: 1, username: 'Snow', email: 'Jon@gmail.com' , age: 35, status: "active", },
+    { id: 2, username: 'Lannister', email: 'Cersei@gmail.com', age: 42, status: "inactive",  },
+    { id: 3, username: 'Lannister', email: 'Jaime@gmail.com', age: 45, status: "pending",  },
+    { id: 4, username: 'Stark', email: 'Arya@gmail.com', age: 16, status: "active",  },
+    { id: 5, username: 'Targaryen', email: 'Daenerys@gmail.com', age: 22, status: "inactive",  },
+    { id: 6, username: 'Melisandre', email: 'Melisandre@gmail.com', age: 150, status: "pending",  },
+    { id: 7, username: 'Clifford', email: 'Ferrara@gmail.com', age: 44, status: "pending",  },
+    { id: 8, username: 'Frances', email: 'Rossini@gmail.com', age: 36, status: "inactive",  },
+    { id: 9, username: 'Roxie', email: 'Harvey@gmail.com', age: 65, status: "inactive",  },
+];

@@ -3,12 +3,10 @@ import React from 'react'
 import styled from 'styled-components'
 import { DataTable } from '../../components/DataTable/DataTable'
 import { Layout } from '../../components/Layout/Layout'
-import { LeftNav } from '../../components/LeftNav/LeftNav'
-import { Navbar } from '../../components/Navbar/Navbar'
 import { RevenueGraph } from '../../components/RevenueGraph/RevenueGraph'
 import { RevenueWidget } from '../../components/RevenueWidget/RevenueWidget'
 import { SmallWidget } from '../../components/SmallWidget/SmallWidget'
-import { SmallWidgets, TransactionColumns, TransactionRows } from '../../data'
+import { SmallWidgets, TransactionRows } from '../../data'
 import { ChartData } from '../../data';
 
 export const Dashboard : React.FC = () => {
@@ -26,7 +24,7 @@ export const Dashboard : React.FC = () => {
           <RevenueWidget />
           <RevenueGraph ChartData={ChartData} />
         </RevenueContainer>
-        <DataTable rows={TransactionRows} columns={TransactionColumns} />
+        <DataTable rows={TransactionRows} />
       </DashboardData>
     </Layout>
   )

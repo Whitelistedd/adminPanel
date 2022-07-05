@@ -41,5 +41,4 @@ export interface LayoutProps {
 
 export interface DataTableProps {
     rows: any[]
-    columns: any[]
 }

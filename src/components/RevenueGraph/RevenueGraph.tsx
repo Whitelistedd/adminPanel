@@ -25,7 +25,7 @@ const StyledLineChart = styled(LineChart)`
 const Container = styled.div`
     flex: 2;
     height: 100%;
-    box-shadow: 2px 2px 20px rgb(0, 0, 0, 0.1);
+    box-shadow: 2px 4px 10px 1px rgb(201, 201, 201, 0.47);
     border-radius: 10px;
     padding: 1em;
     width: 100%;
