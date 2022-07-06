@@ -4,7 +4,7 @@ import MoreVertIcon from '@mui/icons-material/MoreVert';
 import 'react-circular-progressbar/dist/styles.css';
 
 import { Stats } from '../Stats/Stats';
-import { StatsList } from '../../data';
+import { StatsList } from '../../data/componentsData';
 import { ProgressCircularBar } from '../ProgressCircularBar/ProgressCircularBar';
 
 export const RevenueWidget : React.FC = () => {

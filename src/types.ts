@@ -42,3 +42,14 @@ export interface LayoutProps {
 export interface DataTableProps {
     rows: any[]
 }
+
+export type ChartDataType = Array<{name: string, uv: number}>
+
+export type TransactionRowsType = Array<{
+    id: number,
+    product: string,
+    name: string,
+    date : string,
+    amount: number,
+    status: string
+}>

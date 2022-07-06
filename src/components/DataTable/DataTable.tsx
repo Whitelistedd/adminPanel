@@ -2,7 +2,6 @@ import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from
 import React from 'react'
 import styled from 'styled-components'
 
-import { TransactionRows } from '../../data'
 import { DataTableProps } from '../../types'
 
 export const DataTable : React.FC<DataTableProps> = ({rows}) => {
@@ -21,7 +20,7 @@ export const DataTable : React.FC<DataTableProps> = ({rows}) => {
         </TableHead>
         <TableBody >
           {
-            TransactionRows.map(row =>
+            rows.map(row =>
             <TableRow >
               <TableCell >{row.id}</TableCell>
               <TableCell>{row.product}</TableCell>

@@ -1,8 +1,9 @@
 import React from 'react'
-import { Layout } from '../../components/Layout/Layout'
 import styled from 'styled-components';
-import { UsersColumns, UsersRows } from '../../data';
 import { DataGrid } from '@mui/x-data-grid';
+
+import { Layout } from '../../components/Layout/Layout'
+import { UsersColumns, UsersRows } from '../../data/ChartsData';
 
 const ActionsColumn = [
   {
@@ -24,14 +25,14 @@ export const Users : React.FC = () => {
   return (
     <Layout>
       <Container>
-      <DataGrid
-        rows={UsersRows}
-        columns={UsersColumns.concat(ActionsColumn)}
-        pageSize={15}
-        rowsPerPageOptions={[5]}
-        checkboxSelection
-        disableSelectionOnClick
-      />
+        <DataGrid
+          rows={UsersRows}
+          columns={UsersColumns.concat(ActionsColumn)}
+          pageSize={15}
+          rowsPerPageOptions={[5]}
+          checkboxSelection
+          disableSelectionOnClick
+        />
       </Container>
     </Layout>
   )

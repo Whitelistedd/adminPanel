@@ -1,13 +1,14 @@
 
 import React from 'react'
 import styled from 'styled-components'
+
 import { DataTable } from '../../components/DataTable/DataTable'
 import { Layout } from '../../components/Layout/Layout'
 import { RevenueGraph } from '../../components/RevenueGraph/RevenueGraph'
 import { RevenueWidget } from '../../components/RevenueWidget/RevenueWidget'
 import { SmallWidget } from '../../components/SmallWidget/SmallWidget'
-import { SmallWidgets, TransactionRows } from '../../data'
-import { ChartData } from '../../data';
+import { SmallWidgets } from '../../data/componentsData'
+import { ChartData, TransactionRows } from '../../data/ChartsData';
 
 export const Dashboard : React.FC = () => {
   return (

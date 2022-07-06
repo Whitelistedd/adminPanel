@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import LogoImageSrc from "../../assets/images/basealpha.png"
-import { LeftNavigationLists } from './../../data';
+import { LeftNavigationLists } from '../../data/componentsData';
 import { NavList } from './NavList/NavList';
 
 export const LeftNav : React.FC = () => {
