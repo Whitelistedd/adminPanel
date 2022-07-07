@@ -6,6 +6,7 @@ import 'react-circular-progressbar/dist/styles.css';
 import { Stats } from '../Stats/Stats';
 import { StatsList } from '../../data/componentsData';
 import { ProgressCircularBar } from '../ProgressCircularBar/ProgressCircularBar';
+import { devices } from '../../MediaQueries';
 
 export const RevenueWidget : React.FC = () => {
 
@@ -55,7 +56,23 @@ const Container = styled.div`
   align-items: center;
   color: grey;
   gap: 1.5em;
+  min-width: 25%;
   box-shadow: 2px 4px 10px 1px rgb(201, 201, 201, 0.47);
   border-radius: 10px;
   font-size: 17px;
+
+  @media only screen and (max-width: ${devices.Desktop}) {
+    font-size: 13px;
+    height: 90%;
+  }
+  @media only screen and (max-width: ${devices.Laptop}) {
+    font-size: 11px;
+    height: 83%;
+  }
+
+  @media only screen and (max-width: ${devices.Tablet}) {
+    width: 100%;
+    height: 60%;
+    max-height: 100%;
+  }
 `

@@ -23,14 +23,15 @@ const StyledLineChart = styled(LineChart)`
 `
 
 const Container = styled.div`
-    flex: 2;
-    height: 100%;
+    max-height: 100%;
     box-shadow: 2px 4px 10px 1px rgb(201, 201, 201, 0.47);
     border-radius: 10px;
     padding: 1em;
     width: 100%;
+    min-width: 300px;
     div {
       width: 100%;
+      min-width: 40vw;
       height: 100%;
     }
 `

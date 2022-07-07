@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 import LogoImageSrc from "../../assets/images/basealpha.png"
 import { LeftNavigationLists } from '../../data/componentsData';
+import { devices } from '../../MediaQueries';
 import { NavList } from './NavList/NavList';
 
 export const LeftNav : React.FC = () => {
@@ -35,8 +36,13 @@ const Logo = styled.div`
 
 const Container = styled.div`
     width: 15vw;
+    min-width: 200px;
     height: 100%;
     border: 2px solid #F8F8F8;
     display: flex;
     flex-direction: column;
+
+    @media only screen and (max-width: ${devices.mobile}) {
+        display: none;
+    }
 `

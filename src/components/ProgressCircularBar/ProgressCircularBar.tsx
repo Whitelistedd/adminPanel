@@ -14,5 +14,5 @@ export const ProgressCircularBar : React.FC<ProgressProps> = ({valueStart, value
 }
 
 const StyledCircularProgressbar = styled(CircularProgressbar)`
-  width: 200px;
+  width: 10vw;
 `

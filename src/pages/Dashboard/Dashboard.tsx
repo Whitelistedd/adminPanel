@@ -9,6 +9,7 @@ import { RevenueWidget } from '../../components/RevenueWidget/RevenueWidget'
 import { SmallWidget } from '../../components/SmallWidget/SmallWidget'
 import { SmallWidgets } from '../../data/componentsData'
 import { ChartData, TransactionRows } from '../../data/ChartsData';
+import { devices } from '../../MediaQueries'
 
 export const Dashboard : React.FC = () => {
   return (
@@ -35,11 +36,14 @@ const RevenueContainer = styled.div`
   display: flex;
   height: 100%;
   gap: 1em;
+  align-items: center;
 `
 
 const SmallWidgetContainer = styled.div`
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1em;
 `
 
 const DashboardData = styled.div`
@@ -48,4 +52,10 @@ const DashboardData = styled.div`
   display: flex;
   flex-direction: column;
   gap: 2em;
+
+  @media only screen and (max-width: ${devices.Tablet}) {
+    ${RevenueContainer} {
+      flex-direction: column;
+    }
+  }
 `

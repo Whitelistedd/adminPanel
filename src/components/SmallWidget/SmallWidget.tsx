@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { devices } from '../../MediaQueries';
 
 import { SmallWidgetProps } from '../../types';
 
@@ -53,11 +54,39 @@ const WidgetTop = styled.div`
 
 const Container = styled.div`
     box-shadow: 2px 4px 10px 1px rgb(201, 201, 201, 0.47);
-    padding: 0.5em;
+    padding: 0.8em;
     width: 20%;
+    min-width: 150px;
     height: 150px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    @media only screen and (max-width: ${devices.Desktop}) {
+        font-size: 14px;
+    }
+    @media only screen and (max-width: ${devices.Laptop}) {
+        font-size: 11px;
+        height: 120px;
+        ${WidgetBottom} {
+            svg {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+    @media only screen and (max-width: ${devices.Tablet}) {
+        font-size: 8px;
+        height: 90px;
+        ${WidgetBottom} {
+            svg {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+
+    @media only screen and (max-width: ${devices.mobile}) {
+    }
 `

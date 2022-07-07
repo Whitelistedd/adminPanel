@@ -6,16 +6,14 @@ import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNone
 import ModeCommentOutlinedIcon from '@mui/icons-material/ModeCommentOutlined';
 import SettingsIcon from '@mui/icons-material/Settings';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import SearchIcon from '@mui/icons-material/Search';
+import MenuIcon from '@mui/icons-material/Menu';
 import { Badge } from '@mui/material';
+import { devices } from '../../MediaQueries';
 
 export const Navbar : React.FC = () => {
   return (
     <Container>
-      <SearchWrap>
-        <Searchbar type="text" placeholder="Search..." />
-        <SearchIcon />
-      </SearchWrap>
+      <MobileMenuIcon />
       <NavList>
         <Language>
           <LanguageIcon />
@@ -38,6 +36,7 @@ export const Navbar : React.FC = () => {
 const Language = styled.div`
   display: flex;
   align-items: center;
+  font-size: 1em;
 `
 
 const NavList = styled.ul`
@@ -47,30 +46,29 @@ const NavList = styled.ul`
   list-style: none;
 `
 
-const Searchbar = styled.input`
-  padding: 0.8em 0em;
-  border: none
-`
-
-const SearchWrap = styled.div`
-  padding: 0em 0.5em;
-  display: flex;
-  align-items: center;
-  border: 1px solid black;
-  svg {
-    &:hover {
-      cursor: pointer;
-    }
-  }
+const MobileMenuIcon = styled(MenuIcon)`
+  display: none !important;
 `
 
 const Container = styled.nav`
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
     padding: 1em;
     width: 100%;
     height: 70px;
     border-bottom: 2px solid #F8F8F8;
     color: #3d3d3d;
+
+    @media only screen and (max-width: ${devices.mobile}) {
+      justify-content: space-between;
+      ${MobileMenuIcon} {
+        display: block !important;
+      }
+      font-size: 13px;
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
 `
