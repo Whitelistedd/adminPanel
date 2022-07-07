@@ -6,9 +6,9 @@ import { LeftNavigationLists } from '../../data/componentsData';
 import { devices } from '../../MediaQueries';
 import { NavList } from './NavList/NavList';
 
-export const LeftNav : React.FC = () => {
+export const LeftNav : React.FC = ({className} : {className?: string}) => {
   return (
-    <Container>
+    <Container className={className} >
         <Logo>
             <LogoImage src={LogoImageSrc} />
         </Logo>
@@ -35,8 +35,7 @@ const Logo = styled.div`
 `
 
 const Container = styled.div`
-    width: 15vw;
-    min-width: 200px;
+    width: 200px;
     height: 100%;
     border: 2px solid #F8F8F8;
     display: flex;

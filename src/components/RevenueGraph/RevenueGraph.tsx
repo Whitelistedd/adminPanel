@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { LineChart, Line, CartesianGrid, XAxis, YAxis,ResponsiveContainer,Area } from 'recharts';
+import { devices } from '../../MediaQueries';
 
 
 export const RevenueGraph = ({ChartData} : { ChartData: any[]}) => {
@@ -33,5 +34,15 @@ const Container = styled.div`
       width: 100%;
       min-width: 40vw;
       height: 100%;
+    }
+
+    @media only screen and (max-width: ${devices.mobile}) {
+      width: 100%;
+      padding: 1em 1em 1em 0em;
+      div {
+        width: 100%;
+        min-width: 100%;
+        height: 100%;
+      }
     }
 `

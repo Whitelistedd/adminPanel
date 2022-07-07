@@ -1,6 +1,7 @@
 import React from 'react'
 import { CircularProgressbar } from 'react-circular-progressbar'
 import styled from 'styled-components'
+import { devices } from '../../MediaQueries'
 
 import { ProgressProps } from '../../types'
 import { ProgressProvider } from '../ProgressProvider/ProgressProvider'
@@ -15,4 +16,7 @@ export const ProgressCircularBar : React.FC<ProgressProps> = ({valueStart, value
 
 const StyledCircularProgressbar = styled(CircularProgressbar)`
   width: 10vw;
+  @media only screen and (max-width: ${devices.mobile}) {
+    width: 20vw
+  }
 `

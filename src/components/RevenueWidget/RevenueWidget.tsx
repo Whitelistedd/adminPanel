@@ -75,4 +75,8 @@ const Container = styled.div`
     height: 60%;
     max-height: 100%;
   }
+  
+  @media only screen and (max-width: ${devices.mobile}) {
+    max-height: 350px;
+  }
 `

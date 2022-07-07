@@ -24,7 +24,10 @@ export const Stats : React.FC<StatsProps> = ({List,numbers}) => {
 
 const StatTitle = styled.p``
 
-const StatNumber = styled.p``
+const StatNumber = styled.p`
+  display: flex;
+  align-items: center;
+`
 
 const Numbers = styled.div`
   display: flex;

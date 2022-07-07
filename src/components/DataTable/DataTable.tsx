@@ -1,6 +1,7 @@
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material'
 import React from 'react'
 import styled from 'styled-components'
+import { devices } from '../../MediaQueries'
 
 import { DataTableProps } from '../../types'
 
@@ -51,4 +52,17 @@ const StyledTableContainer = styled(TableContainer)`
   border: 1px solid #E0E0E0;
   border-radius: 10px;
   box-shadow: 2px 4px 10px 1px rgb(201, 201, 201, 0.47);
+
+  th {
+    font-size: 0.9em;
+  }
+
+  td {
+    font-size: 0.9em;
+  }
+
+  @media only screen and (max-width: ${devices.mobile}) {
+    font-size: 9px;
+  }
+
 `
